@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #daefc6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  border: 5px solid #ffffff;
+  border-radius: 5px;
+}
+
+/* Fitting the camera into the border */
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-button {
+  width: 64px;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%) translateY(-20px);
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* hover over camera button */
+.camera-button:hover {
+  background-color: #ffffff;
+  color: #222;
+  transition: all 200ms linear;
+}
+
+.canvas {
+  display: none;
+}
+
+/*Test*/
+/*Test*/
+/* Countdown timer */
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 10;
+}
+/**/
+/**/
+
+.countdown.active {
+  display: block;
+}
+
+/* Filename input container */
+.filename-container {
+  margin-bottom: 20px;
+}
+
+.filename-container input {
+  padding: 10px 15px;
+  font-size: 1em;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #222;
+  width: 300px;
+  outline: none;
+  transition: border-color 200ms linear;
+}
+
+.filename-container input:focus {
+  border-color: #222;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.filename-container input::placeholder {
+  color: #999;
+}
+
+/* flash effect */
+/* Reove comment to enable flash effect 
+
+.effect {
+  opacity: 0.5;
+  transition: all 100ms ease;
+}
+*/
+
+/* review page layout */
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.review-container img {
+  max-width: 90%;
+  max-height: 70vh;
+  border: 5px solid #fff;
+  border-radius: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+#approveBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+#approveBtn:hover {
+  background-color: #45a049;
+}
+
+#retakeBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+#retakeBtn:hover {
+  background-color: #e53935;
+}

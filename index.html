@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Project</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <!-- TESTING Input for custom filename -->
+    <div class="filename-container">
+      <input
+        type="text"
+        id="filenameInput"
+        placeholder="Enter first and last name"
+      />
+    </div>
+
+    <div class="camera effect">
+      <!-- adding video camera container -->
+      <video class="video"></video>
+
+      <div class="camera-button">
+        <!-- camera icon shutter -->
+        <ion-icon name="camera-outline"></ion-icon>
+      </div>
+    </div>
+
+    <!-- Canvas for capturing images -->
+    <canvas class="canvas" width="500" height="400"></canvas>
+
+    <!-- Countdown display -->
+    <div class="countdown" id="countdown"></div>
+
+    <!-- Link to js -->
+    <script src="java.js"></script>
+    <script>
+      // Restore filename from sessionStorage if available (from retake) //
+      document.addEventListener("DOMContentLoaded", () => {
+        const storedFilename = sessionStorage.getItem("capturedFilename");
+        if (storedFilename) {
+          document.getElementById("filenameInput").value = storedFilename;
+        }
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
