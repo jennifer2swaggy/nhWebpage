@@ -12,7 +12,7 @@ navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
 
 // Countdown function
 function startCountdown() {
-  let count = 5;
+  let count = 3;
   cameraButton.style.pointerEvents = "none"; // Disable button
   countdownElement.classList.add("active");
 
@@ -61,3 +61,4 @@ function takePhoto() {
 
 // Trigger photo take with countdown//
 cameraButton.addEventListener("click", startCountdown);
+
