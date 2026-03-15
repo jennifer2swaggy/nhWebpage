@@ -17,21 +17,32 @@
       />
     </div>
 
-    <div class="camera effect">
-      <!-- adding video camera container -->
-      <video class="video"></video>
+    <div class="camera-wrapper">
+      <div class="camera effect">
+        <!-- adding video camera container -->
+        <video class="video"></video>
 
-      <div class="camera-button">
-        <!-- camera icon shutter -->
-        <ion-icon name="camera-outline"></ion-icon>
+        <div class="camera-button">
+          <!-- camera icon shutter -->
+          <ion-icon name="camera-outline"></ion-icon>
+        </div>
+      </div>
+
+      <!-- Canvas for capturing images -->
+      <canvas class="canvas" width="500" height="400"></canvas>
+
+      <!-- Countdown display -->
+      <div class="countdown" id="countdown"></div>
+
+      <!-- Review Image -->
+      <div class="review-container" id="reviewContainer" style="display: none">
+        <img id="reviewImage" src="" alt="Captured photo" />
+        <div class="button-group">
+          <button id="approveBtn">Approve &amp; Download</button>
+          <button id="retakeBtn">Reject &amp; Retake</button>
+        </div>
       </div>
     </div>
-
-    <!-- Canvas for capturing images -->
-    <canvas class="canvas" width="500" height="400"></canvas>
-
-    <!-- Countdown display -->
-    <div class="countdown" id="countdown"></div>
 
     <!-- Link to js -->
     <script src="java.js"></script>
