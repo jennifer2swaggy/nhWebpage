@@ -13,9 +13,16 @@ body {
   align-items: center;
 }
 
-.camera {
+.camera-wrapper {
+  position: relative;
   width: 500px;
   height: 400px;
+  margin: 0 auto;
+}
+
+.camera {
+  width: 100%;
+  height: 100%;
   position: relative;
   border: 5px solid #ffffff;
   border-radius: 5px;
@@ -79,7 +86,8 @@ body {
 
 /* Filename input container */
 .filename-container {
-  margin-bottom: 20px;
+  width: 500px;
+  margin: 0 auto 20px;
 }
 
 .filename-container input {
@@ -89,7 +97,7 @@ body {
   border-radius: 5px;
   background-color: #fff;
   color: #222;
-  width: 300px;
+  width: 100%;
   outline: none;
   transition: border-color 200ms linear;
 }
@@ -97,6 +105,51 @@ body {
 .filename-container input:focus {
   border-color: #222;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Review container */
+.review-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.25);
+  border: 5px solid #ffffff;
+  border-radius: 5px;
+}
+
+.review-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.button-group {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #222;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.button-group button:hover {
+  background-color: #ffffff;
+  color: #222;
 }
 
 .filename-container input::placeholder {
@@ -111,36 +164,6 @@ body {
   transition: all 100ms ease;
 }
 */
-
-/* review page layout */
-.review-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.review-container img {
-  max-width: 90%;
-  max-height: 70vh;
-  border: 5px solid #fff;
-  border-radius: 5px;
-}
-
-.button-group {
-  display: flex;
-  gap: 20px;
-}
-
-.button-group button {
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 200ms;
-}
 
 #approveBtn {
   background-color: #4caf50;
